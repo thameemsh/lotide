@@ -1,9 +1,4 @@
-// Modified assertEqual function to compare strings 
-const assertEqual = function(actual, expected) {
-  if (JSON.stringify(actual) === JSON.stringify(expected)) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-};
+const assertEqual = require("./assertEqual")
 
 const tail = function(array) {
   if (array.length >= 1) {
@@ -12,8 +7,4 @@ const tail = function(array) {
   } 
 };
 
-assertEqual(tail(["lighthouse","labs","hello"]), ["labs","hello"]);
-assertEqual(tail([]),["hello","world"]);
-assertEqual(tail([1,2,3]),[2,3]);
-
-
+module.exports = tail;
