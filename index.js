@@ -24,6 +24,7 @@ module.exports = {
   takeUntil,
   map,
   letterPositions,
+  flatten,
   findKeyByValue,
   findKey,
   eqObjects,
